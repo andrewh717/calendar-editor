@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class CalendarEditor {
     public static void main(String[] args) throws Exception {
-        // arg[0] must be the name of the ics file beind edited
+        // arg[0] must be the name of the ICS file being edited
         BufferedReader br = new BufferedReader(new FileReader(args[0]));
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
@@ -15,7 +15,7 @@ public class CalendarEditor {
         String fileName = args[0].substring(0, extensionIndex);
         BufferedWriter bw = new BufferedWriter(new FileWriter(fileName + "-edited.ics"));
 
-        // Get user input of oringal summary
+        // Get user input of original summary
         System.out.println("Enter the name of the summary you'd like to change: ");
         String originalSummary = input.readLine();
 
